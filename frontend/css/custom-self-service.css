@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Variables de thème M3 héritées et adaptées de custom-design
+   ========================================================================== */
+:root {
+    /* L'indigo d'entreprise remplace dynamiquement le bleu OCO par défaut */
+    --primary: #5d59f5;
+    --primary-hover: #4540eb;
+}
+
+/* ==========================================================================
+   Personnalisation de l'Écran de Connexion (Login)
+   ========================================================================== */
+#login-bg {
+    background-image: url('../img/custom-self-service-bg.jpg');
+    filter: none !important;
+}
+
+#login-form {
+    background-color: #11184e;
+    color: white;
+}
+
+#login-wall {
+    /* background-color: white; */
+}
+
+/* #login-wall img#forkme {
+    display: none !important;
+} */
+
+/* Le bouton rose d'origine reste confiné à l'écran de login */
+#login-form button.primary {
+    background-color: #FF717F !important;
+    color: white !important;
+}
