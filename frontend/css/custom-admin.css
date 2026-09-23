@@ -1,0 +1,35 @@
+/* custom header bar background */
+#header {
+	background-color: #5d59f5 !important;
+	background-image: none !important;
+}
+/* adjust buttons for custom bar background */
+#header button {
+	color: white !important;
+}
+#header button img {
+	filter: brightness(1000%) !important;
+}
+#header button.active img {
+	filter: brightness(1000%) drop-shadow(0px 0px 4px white) !important;
+}
+
+/* custom login screen background */
+#login-bg {
+    background-image: url('../img/custom-self-service-bg.jpg');
+    filter: none !important;
+}
+
+#login-form {
+	background-color: #11184e;
+	color: white;
+}
+
+#login-wall {
+	/* background-color: white; */
+}
+
+button.primary {
+	background-color: #FF717F !important;
+	color: white !important;
+}
