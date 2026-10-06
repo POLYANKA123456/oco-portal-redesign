@@ -4,7 +4,7 @@
 return [
     'id' => 'oco-portal-redesign',
     'name' => 'OCO Self-Service Portal Redesign & Custom Corporate Design',
-    'version' => '1.2.0',
+    'version' => '1.1',
     'author' => 'Votre Nom',
     'oco-version-min' => '1.2.0',
 
@@ -48,6 +48,13 @@ return [
         'job-containers.php' => __DIR__.'/frontend/ajax-handler/job-containers.php',
         'logo.php' => __DIR__.'/frontend/ajax-handler/logo.php',
         'favicon.php' => __DIR__.'/frontend/ajax-handler/favicon.php',
+
+        # Support OCO 1.2.3 avec routage explicite index.php/...
+        'index.php/computers.php' => __DIR__.'/frontend/ajax-handler/computers.php',
+        'index.php/packages.php' => __DIR__.'/frontend/ajax-handler/packages.php',
+        'index.php/job-containers.php' => __DIR__.'/frontend/ajax-handler/job-containers.php',
+        'index.php/logo.php' => __DIR__.'/frontend/ajax-handler/logo.php',
+        'index.php/favicon.php' => __DIR__.'/frontend/ajax-handler/favicon.php',
     ],
 
     # Routage des vues du portail (Actif si les fichiers d'origine sont renommés ou si les vues sont nouvelles)
@@ -58,5 +65,13 @@ return [
         'job-container-new.php' => __DIR__.'/frontend/views/job-container-new.php',
         'job-containers.php' => __DIR__.'/frontend/views/job-containers.php',
         'tree.php' => __DIR__.'/frontend/views/tree.php',
+
+        # Support OCO 1.2.3 si appelé via index.php/...
+        'index.php/homepage.php' => __DIR__.'/frontend/views/homepage.php',
+        'index.php/computers.php' => __DIR__.'/frontend/views/computers.php',
+        'index.php/packages.php' => __DIR__.'/frontend/views/packages.php',
+        'index.php/job-container-new.php' => __DIR__.'/frontend/views/job-container-new.php',
+        'index.php/job-containers.php' => __DIR__.'/frontend/views/job-containers.php',
+        'index.php/tree.php' => __DIR__.'/frontend/views/tree.php',
     ],
 ];
