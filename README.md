@@ -28,8 +28,20 @@ git clone https://github.com/POLYANKA123456/oco-portal-redesign
 ```
 
 3. **Configure routing rules:**
-Edit /var/www/oco/self-service/views/.htaccess and add the following line at the very top of the file:
+Edit /var/www/oco/self-service/views/.htaccess :
 
 ```Apache
+RewriteEngine On
+
+# 1. On intercepte les requêtes de nos fichiers surchargés
+# pour forcer l'utilisation de l'index de ce dossier (/self-service/views/index.php)
+# Uniquement si le DocumentRoot contient "self-service" (portail OCO / self-service)
+RewriteCond %{DOCUMENT_ROOT} self-service
 RewriteRule ^(homepage|computers|packages|job-containers|job-container-new)\.php$ index.php [L]
+
+# 2. Règle d'origine d'OCO pour les fichiers inexistants
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-s
+RewriteRule .* index.php
 ```
